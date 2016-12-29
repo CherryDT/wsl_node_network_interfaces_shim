@@ -1,12 +1,12 @@
 # wsl_node_network_interfaces_shim
 _A shim to prevent node from crashing when running in WSL when os.networkInterfaces is used_
 
-The Windows Subsystem for Linux (WSL) is great. However, it still has some issues. One of them is that network interface management isn't implemented yet.
-Because of that, the `os.networkInterfaces` function in node.js will crash with `EINVAL`. Here is the [GitHub issue about this problem](https://github.com/Microsoft/BashOnWindows/issues/468).
+The Windows Subsystem for Linux (WSL) is great. However, it still has some issues. One of them is that network interface management isn't implemented yet. Because of that, the `os.networkInterfaces` function in node.js will crash with `EINVAL`. Here is the [GitHub issue about this problem](https://github.com/Microsoft/BashOnWindows/issues/468).
 
 ## Workaround
 
 **TL;DR**: A quick fix for this problem would be running the following command: `curl https://raw.githubusercontent.com/CherryDT/wsl_node_network_interfaces_shim/master/wsl_node_network_interfaces_shim.sh > /tmp/wslfix.sh && chmod +x /tmp/wslfix.sh && sudo /tmp/wslfix.sh install`
+
 If this fails with an error, read below.
 
 -----
