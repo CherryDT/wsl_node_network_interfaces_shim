@@ -180,10 +180,10 @@ case $COMMAND in
       error_exit "Shim is already installed."
     fi
     if [[ "$(which node)" != "/usr/bin/node" ]]; then
-      error_exit "node must be reachable via /usr/bin/node and\nin path, please use n for node version management.\nIf this message appears after an unsuccessful shim installation, use:\n$0 uninstall -f"
+      error_exit "node must be reachable via /usr/bin/node and\nin path, make sure node is installed correctly.\nIf this message appears after an unsuccessful shim installation, use:\n$0 uninstall -f"
     fi
     if [[ "$(readlink $(which node))" != "/etc/alternatives/node" ]]; then
-      error_exit "/usr/bin/node must be linked to\n/etc/alternatives/node, please use n for node version management.\nIf this message appears after an unsuccessful shim installation, use:\n$0 uninstall -f"
+      error_exit "/usr/bin/node must be linked to\n/etc/alternatives/node, make sure node is installed correctly.\nIf this message appears after an unsuccessful shim installation, use:\n$0 uninstall -f"
     fi
     rm -rf /opt/wsl-node-shim
     mkdir -p /opt/wsl-node-shim
@@ -202,7 +202,7 @@ case $COMMAND in
       error_exit "Shim is not installed."
     fi
     if [[ ! -e /etc/alternatives/node ]]; then
-      error_exit "/etc/alternatives/node must exist, please\nuse n for node version management."
+      error_exit "/etc/alternatives/node must exist, please\nmake sure node is installed correctly."
     fi
     rm -rf /opt/wsl-node-shim
     rm /usr/bin/node

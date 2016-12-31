@@ -17,7 +17,7 @@ Basically, this shim will prevent the crash when any node script calls `os.netwo
 
 I created a bash script which does the dirty work for you.
 
-* Make sure you have node installed [managed by `n`](https://github.com/tj/n), if not: `sudo npm install -g n && sudo n latest` (instead of `latest`, you can specify a node version)
+* Make sure you have node installed the "normal" way so that `/etc/alternatives/node` exists. (It usually does when installing a modern node version from the nodesource repositories.)
 * Download the script from this repository manually, or:
   - If you don't have a `~/bin` folder, create it: `mkdir ~/bin` and close and reopen bash so bash will detect it and add it to the path. (The script doesn't _have_ to be installed in `~/bin`, I just found it convenient.)
   - Run `curl https://raw.githubusercontent.com/CherryDT/wsl_node_network_interfaces_shim/master/wsl_node_network_interfaces_shim.sh > ~/bin/wsl_node_network_interfaces_shim.sh && chmod +x ~/bin/wsl_node_network_interfaces_shim.sh`
