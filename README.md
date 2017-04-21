@@ -1,3 +1,7 @@
+## This workaround is now obsolete because the underlying issue in Windows was fixed and the fix has now been released to the public as part of the Creators Update on April 11th, 2017.
+
+-----
+
 # wsl_node_network_interfaces_shim
 _A shim to prevent node from crashing when running in WSL when os.networkInterfaces is used_
 
